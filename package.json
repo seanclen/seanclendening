@@ -8,6 +8,7 @@
     "url": "https://github.com/seanclen/seanclendening/issues"
   },
   "dependencies": {
+    "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^2.13.73",
     "gatsby-image": "^2.2.10",
     "gatsby-plugin-feed": "^2.3.7",
@@ -25,6 +26,7 @@
     "gatsby-source-filesystem": "^2.1.11",
     "gatsby-transformer-remark": "^2.6.15",
     "gatsby-transformer-sharp": "^2.2.7",
+    "gray-percentage": "^2.0.0",
     "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -32,7 +34,10 @@
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
+    "typeface-playfair-display": "0.0.72",
+    "typeface-raleway": "0.0.75",
     "typography": "^0.16.19",
+    "typography-breakpoint-constants": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
