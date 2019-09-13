@@ -8,6 +8,7 @@
     "url": "https://github.com/seanclen/seanclendening/issues"
   },
   "dependencies": {
+    "animejs": "^3.1.0",
     "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^2.13.73",
     "gatsby-image": "^2.2.10",
