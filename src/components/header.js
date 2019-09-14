@@ -1,19 +1,5 @@
 import React from "react"
-import anime from 'animejs'
-
-function SlideOverlay(props) {
-  return(
-    <div id={props.id} style={{
-      top: `0px`,
-      left: `0px`,
-      width: `100vw`,
-      height: `100vh`,
-      backgroundColor: props.color,
-      position: `absolute`,
-      zIndex: 5,
-    }}></div>
-  )
-}
+import anime from "animejs"
 
 class Header extends React.Component {
     constructor(props) {
@@ -94,12 +80,25 @@ class Header extends React.Component {
     const { data, location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
 
-    let overlayProps, periodProps
     if (location.pathname === rootPath) {
 
     }
     return (
-      <header class="main-header">
+      <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item">
+                Home
+              </a>
+            </div>
+          </div>
+        </nav>
         <figure class={`logo-container ${isPreloaderDone ? "" : " animating"}`}>
           <svg viewBox="0 0 48 48" height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
