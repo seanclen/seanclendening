@@ -16,6 +16,11 @@ function SlideOverlay(props) {
 }
 
 class Header extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { isPreloaderDone: false };
+    }
+
   componentDidMount(){
     var timeline = anime.timeline({
       loop: 0,
@@ -47,7 +52,7 @@ class Header extends React.Component {
       targets: '#logoPeriod',
       y: 17,
       height: 14
-    }).add({
+    }, '-=500').add({
       targets: '#logoHelloCursor',
       opacity: [0,1],
       duration: 200
@@ -70,20 +75,22 @@ class Header extends React.Component {
       targets: '#logoPeriod',
       y: 28,
       height: 7
-    }, '-=500'). add({
+    }, '-=500').add({
       targets: '#logo',
       translateY: '0px',
       translateX: '0px',
       rotate: 0,
       scale: 1
-    }).add({
-      targets: '.logo-container',
-      width: '1%',
-      height: '1%'
+    }, '-=500')
+
+    timeline.finished.then(() => {
+      console.log('finished')
+      this.setState(prevState => ({ isPreloaderDone: !prevState.isPreloaderDone }));
     })
   }
 
   render() {
+    const { isPreloaderDone } = this.state;
     const { data, location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
 
@@ -92,23 +99,8 @@ class Header extends React.Component {
 
     }
     return (
-      <header
-        style={{
-          top: `0px`,
-      }}>
-        <figure class="logo-container"
-          style={{
-            overflow: `hidden`,
-            position: `absolute`,
-            backgroundColor: `#242426`,
-            minWidth: `48px`,
-            minHeight: `48px`,
-            width: `100%`,
-            height: `100%`,
-            top: `0px`,
-            left: `0px`,
-            zIndex: 4,
-          }}>
+      <header class="main-header">
+        <figure class={`logo-container ${isPreloaderDone ? "" : " animating"}`}>
           <svg viewBox="0 0 48 48" height="100%" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <rect id="logoBackground" fill="#242426" x="0" y="0" width="48" height="48"></rect>

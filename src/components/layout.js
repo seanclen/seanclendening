@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
 import { rhythm } from "../utils/typography"
+import '../assets/sass/all.sass'
 
 class Layout extends React.Component {
   render() {
