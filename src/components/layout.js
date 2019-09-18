@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Helmet from 'react-helmet'
 import Header from "../components/header"
 import '../assets/sass/_all.sass'
 
@@ -9,9 +10,13 @@ class Layout extends React.Component {
 
     return (
       <div>
+        <Helmet>
+          <html lang="en" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
         <Header location={location} />
         <div>
-          <main>{children}</main>
+          <main class="section-container">{children}</main>
         </div>
         <footer>
           © {new Date().getFullYear()}, Built with

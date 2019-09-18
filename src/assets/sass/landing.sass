@@ -1,0 +1,109 @@
+.landing-intro
+  background-color: #EAEBEE
+  background-image: linear-gradient(-180deg, #EAEBEE 0%, #EAEBEE 23%, #E1E3E6 57%, #EAEBEE 62%, #D0D3D9 100%)
+  position: relative
+
+  .hero-body
+    .level
+      margin-top: 15rem
+      padding: 0rem 10rem
+      .level-left .level-item, .level-right .level-item
+        color: $white
+        font-size: 3.5rem
+        font-weight: 900
+        position: relative
+        z-index: 0
+        span[data-text]:before
+          color: inherit
+          font-size: inherit
+          font-weight: inherit
+          position: absolute
+          z-index: -2
+        span[data-text]:after
+          background-color: $primary
+          bottom: 0.25rem
+          content: ''
+          height: 1rem
+          left: -0.5rem
+          position: absolute
+          width: 105%
+          z-index: -1
+        &:before
+          display: block
+          content: ' '
+          height: 0px
+          position: absolute
+          bottom: -5rem
+          width: 90%
+          box-shadow: 0 0 25px 15px rgba(140,140,140,0.20)
+        &:after
+          background-color: $primary
+          bottom: 0.25rem
+          content: ''
+          height: 1rem
+          left: -0.5rem
+          position: absolute
+          width: 105%
+          z-index: -3
+
+      .level-left .level-item
+        text-shadow: 1px -1px 0 hsl(0, 0%, 93%), 2px -2px 0 hsl(0, 0%, 91%)
+        span[data-text]:before
+          content: attr(data-text)
+          text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
+        span[data-text]:after
+          box-shadow: 1px -1px 0 darken($primary, 6%), 2px -2px 0 darken($primary, 8%)
+        &:after
+          box-shadow: 3px -3px 0 darken($primary, 10%), 4px -4px 0 darken($primary, 12%), 5px -5px 0 darken($primary, 14%), 6px -6px 0 darken($primary, 16%), 7px -7px 0 darken($primary, 17%), 8px -8px 0 darken($primary, 18%), 9px -9px 0 darken($primary, 19%), 10px -10px 0 darken($primary, 20%)
+
+      .level-right .level-item
+        text-shadow: -1px -1px 0 hsl(0, 0%, 93%), -2px -2px 0 hsl(0, 0%, 91%)
+        span[data-text]:before
+          content: attr(data-text)
+          text-shadow: -3px -3px 0 hsl(0, 0%, 89%), -4px -4px 0 hsl(0, 0%, 87%), -5px -5px 0 hsl(0, 0%, 85%)
+        span[data-text]:after
+          box-shadow: -1px -1px 0 darken($primary, 6%), -2px -2px 0 darken($primary, 8%)
+        &:after
+          box-shadow: -3px -3px 0 darken($primary, 10%), -4px -4px 0 darken($primary, 12%), -5px -5px 0 darken($primary, 14%), -6px -6px 0 darken($primary, 16%), -7px -7px 0 darken($primary, 17%), -8px -8px 0 darken($primary, 18%), -9px -9px 0 darken($primary, 19%), -10px -10px 0 darken($primary, 20%)
+
+    // .level-left .level-item
+    //   color: $white
+    //   font-size: 3.5rem
+    //   font-weight: 900
+    //   position: relative
+    //   text-shadow: 1px -1px 0 hsl(0, 0%, 93%), 2px -2px 0 hsl(0, 0%, 91%)
+    //   z-index: 0
+    //   span[data-text]:before
+    //     color: inherit
+    //     content: attr(data-text)
+    //     font-size: inherit
+    //     font-weight: inherit
+    //     position: absolute
+    //     text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
+    //     z-index: -2
+    //   span[data-text]:after
+    //     background-color: $primary
+    //     bottom: 0.25rem
+    //     box-shadow: 1px -1px 0 darken($primary, 6%), 2px -2px 0 darken($primary, 8%)
+    //     content: ''
+    //     height: 1rem
+    //     left: -0.5rem
+    //     position: absolute
+    //     width: 105%
+    //     z-index: -1
+    //   &:after
+    //     content: ''
+    //     position: absolute
+    //     bottom: 0.25rem
+    //     left: -0.5rem
+    //     width: 105%
+    //     height: 1rem
+    //     background-color: $primary
+    //     box-shadow: 3px -3px 0 darken($primary, 10%), 4px -4px 0 darken($primary, 12%), 5px -5px 0 darken($primary, 14%), 6px -6px 0 darken($primary, 16%), 7px -7px 0 darken($primary, 17%), 8px -8px 0 darken($primary, 18%), 9px -9px 0 darken($primary, 19%), 10px -10px 0 darken($primary, 20%)
+    //     z-index: -3
+
+    .title
+      font-size: 5.25rem
+      .period
+        color: $primary
+        text-shadow: 0.15rem 0rem $primary

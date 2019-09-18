@@ -1,16 +1,45 @@
 //Bulma Overrides
 $yellow: #D9C077
 $white-ter: #D0D3D9
+$grey: hsl(0, 0%, 42%)
 $grey-darker: #242426
 
 $family-sans-serif: 'Raleway','Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif
+$text: $grey-darker
 $primary: $yellow
 $mobile: 576px !default
+
+$navbar-background-color: transparent
+$navbar-height: 6.25rem
+$navbar-item-color: $grey-darker
+$navbar-item-hover-color: #000000
+$navbar-padding-horizontal: 3rem
+$navbar-padding-vertical: 0.5rem
+
+// Global
+.has-text-weight-extra-bold
+  font-weight: 800 !important
+.has-text-weight-black
+  font-weight: 900 !important
+*:-moz-selection
+  background: $grey-darker !important
+  color: #ffffff !important
+*::selection
+  background: $grey-darker !important
+  color: #ffffff !important
 
 //Bulma Imports
 @import "bulma/sass/utilities/_all.sass"
 @import "bulma/sass/base/_all.sass"
 @import "bulma/sass/components/navbar.sass"
+@import "bulma/sass/components/level.sass"
 @import "bulma/sass/elements/button.sass"
+@import "bulma/sass/elements/content.sass"
+@import "bulma/sass/elements/title.sass"
+@import "bulma/sass/elements/container.sass"
+@import "bulma/sass/layout/hero.sass"
+@import "bulma/sass/layout/section.sass"
 
+@import "./mixins.sass"
 @import "./headers.sass"
+@import "./landing.sass"
