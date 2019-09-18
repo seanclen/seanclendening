@@ -11,7 +11,7 @@ class Header extends React.Component {
     var waitTimeline = anime.timeline({
       autoplay: true
     }), navbarTimeline = anime.timeline({
-      duration: 500,
+      duration: 2000,
       autoplay: false
     })
 
@@ -20,17 +20,10 @@ class Header extends React.Component {
     })
 
     navbarTimeline.add({
-      duration: 2000 //Wait for landing to complete
+      duration: 4000 //Wait for landing to complete
     }).add({
-      targets: '#main-navigation .navbar-start .navbar-item',
-      delay: function(el, i) { return i * 250; },
+      targets: '#main-navigation .navbar-item',
       opacity: [0,1],
-      translateX: ['-100px', '0px']
-    }).add({
-      targets: '#main-navigation .navbar-end .navbar-item',
-      delay: function(el, i) { return i * 250; },
-      opacity: [0,1],
-      translateX: ['100px', '0px']
     })
 
     waitTimeline.finished.then(() => {

@@ -75,6 +75,16 @@ class Index extends React.Component {
       targets: '.landing-intro .title',
       opacity: [0, 1],
       translateY: ['10rem', '0rem']
+    }).add({
+      targets: '.landing-intro .level-left',
+      translateX: [-1000, 0]
+    }).add({
+      targets: '.landing-intro .level-right',
+      translateX: [1000, 0]
+    }).add({
+      targets: '.landing-intro .subtitle',
+      opacity: [0, 1],
+      translateY: ['-2rem', '0rem']
     })
 
     preloaderTimeline.finished.then(() => {
@@ -94,18 +104,18 @@ class Index extends React.Component {
           <div class="hero-body">
             <div class="container has-text-centered">
               <div>
-                <h1 class="title has-text-weight-black is-marginless">I'm <span class="has-text-white">Sean</span><span class="period">.</span></h1>
-                <p class="is-size-4">I love to create</p>
+                <h1 class="title has-text-weight-black">I'm <span class="has-text-white">Sean</span><span class="period">.</span></h1>
+                <p class="subtitle is-size-4">I love to create</p>
               </div>
               <div class="level">
                 <div class="level-left">
                   <div class="level-item">
-                    <span data-text="Developer">Developer</span>
+                    <a href="" data-text="Developer">Developer</a>
                   </div>
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span data-text="Music Lover">Music Lover</span>
+                    <a href="" data-text="Music Lover">Music Lover</a>
                   </div>
                 </div>
               </div>

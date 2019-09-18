@@ -11,29 +11,35 @@
         color: $white
         font-size: 3.5rem
         font-weight: 900
+        margin-top: 1rem
+        margin-bottom: 1rem
         position: relative
+        transition: all 0.5s ease-in-out
         z-index: 0
-        span[data-text]:before
+        a[data-text]
           color: inherit
-          font-size: inherit
-          font-weight: inherit
-          position: absolute
-          z-index: -2
-        span[data-text]:after
-          background-color: $primary
-          bottom: 0.25rem
-          content: ''
-          height: 1rem
-          left: -0.5rem
-          position: absolute
-          width: 105%
-          z-index: -1
+          &:before
+            color: inherit
+            font-size: inherit
+            font-weight: inherit
+            position: absolute
+            z-index: -2
+          &:after
+            background-color: $primary
+            bottom: 0.25rem
+            content: ''
+            height: 1rem
+            left: -0.5rem
+            position: absolute
+            width: 105%
+            z-index: -1
         &:before
           display: block
           content: ' '
           height: 0px
           position: absolute
           bottom: -5rem
+          transition: all 0.5s ease-in-out
           width: 90%
           box-shadow: 0 0 25px 15px rgba(140,140,140,0.20)
         &:after
@@ -45,62 +51,35 @@
           position: absolute
           width: 105%
           z-index: -3
+        &:hover
+          margin-top: 2rem
+          margin-bottom: 0rem
+          &:before
+            box-shadow: 0 0 25px 20px rgba(140,140,140,0.25)
+            margin-bottom: 0.5rem
+            width: 95%
 
       .level-left .level-item
         text-shadow: 1px -1px 0 hsl(0, 0%, 93%), 2px -2px 0 hsl(0, 0%, 91%)
-        span[data-text]:before
-          content: attr(data-text)
-          text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
-        span[data-text]:after
-          box-shadow: 1px -1px 0 darken($primary, 6%), 2px -2px 0 darken($primary, 8%)
+        a[data-text]
+          &:before
+            content: attr(data-text)
+            text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
+          &:after
+            box-shadow: 1px -1px 0 darken($primary, 6%), 2px -2px 0 darken($primary, 8%)
         &:after
           box-shadow: 3px -3px 0 darken($primary, 10%), 4px -4px 0 darken($primary, 12%), 5px -5px 0 darken($primary, 14%), 6px -6px 0 darken($primary, 16%), 7px -7px 0 darken($primary, 17%), 8px -8px 0 darken($primary, 18%), 9px -9px 0 darken($primary, 19%), 10px -10px 0 darken($primary, 20%)
 
       .level-right .level-item
         text-shadow: -1px -1px 0 hsl(0, 0%, 93%), -2px -2px 0 hsl(0, 0%, 91%)
-        span[data-text]:before
-          content: attr(data-text)
-          text-shadow: -3px -3px 0 hsl(0, 0%, 89%), -4px -4px 0 hsl(0, 0%, 87%), -5px -5px 0 hsl(0, 0%, 85%)
-        span[data-text]:after
-          box-shadow: -1px -1px 0 darken($primary, 6%), -2px -2px 0 darken($primary, 8%)
+        a[data-text]
+            &:before
+              content: attr(data-text)
+              text-shadow: -3px -3px 0 hsl(0, 0%, 89%), -4px -4px 0 hsl(0, 0%, 87%), -5px -5px 0 hsl(0, 0%, 85%)
+            &:after
+              box-shadow: -1px -1px 0 darken($primary, 6%), -2px -2px 0 darken($primary, 8%)
         &:after
           box-shadow: -3px -3px 0 darken($primary, 10%), -4px -4px 0 darken($primary, 12%), -5px -5px 0 darken($primary, 14%), -6px -6px 0 darken($primary, 16%), -7px -7px 0 darken($primary, 17%), -8px -8px 0 darken($primary, 18%), -9px -9px 0 darken($primary, 19%), -10px -10px 0 darken($primary, 20%)
-
-    // .level-left .level-item
-    //   color: $white
-    //   font-size: 3.5rem
-    //   font-weight: 900
-    //   position: relative
-    //   text-shadow: 1px -1px 0 hsl(0, 0%, 93%), 2px -2px 0 hsl(0, 0%, 91%)
-    //   z-index: 0
-    //   span[data-text]:before
-    //     color: inherit
-    //     content: attr(data-text)
-    //     font-size: inherit
-    //     font-weight: inherit
-    //     position: absolute
-    //     text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
-    //     z-index: -2
-    //   span[data-text]:after
-    //     background-color: $primary
-    //     bottom: 0.25rem
-    //     box-shadow: 1px -1px 0 darken($primary, 6%), 2px -2px 0 darken($primary, 8%)
-    //     content: ''
-    //     height: 1rem
-    //     left: -0.5rem
-    //     position: absolute
-    //     width: 105%
-    //     z-index: -1
-    //   &:after
-    //     content: ''
-    //     position: absolute
-    //     bottom: 0.25rem
-    //     left: -0.5rem
-    //     width: 105%
-    //     height: 1rem
-    //     background-color: $primary
-    //     box-shadow: 3px -3px 0 darken($primary, 10%), 4px -4px 0 darken($primary, 12%), 5px -5px 0 darken($primary, 14%), 6px -6px 0 darken($primary, 16%), 7px -7px 0 darken($primary, 17%), 8px -8px 0 darken($primary, 18%), 9px -9px 0 darken($primary, 19%), 10px -10px 0 darken($primary, 20%)
-    //     z-index: -3
 
     .title
       font-size: 5.25rem
