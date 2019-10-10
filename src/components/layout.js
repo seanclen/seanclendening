@@ -16,7 +16,7 @@ class Layout extends React.Component {
         </Helmet>
         <Header location={location} />
         <div>
-          <main class="section-container">{children}</main>
+          <main className="section-container">{children}</main>
         </div>
         <footer>
           © {new Date().getFullYear()}, Built with

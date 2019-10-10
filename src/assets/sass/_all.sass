@@ -1,18 +1,25 @@
 //Bulma Overrides
 $yellow: #D9C077
-$white-ter: #D0D3D9
-$grey: hsl(0, 0%, 42%)
+
 $grey-darker: #242426
+$grey-dark: hsl(0, 0%, 29%)
+$grey: hsl(0, 0%, 42%)
+$grey-light: hsl(0, 0%, 71%)
+$grey-lighter: hsl(0, 0%, 86%)
+$white-ter: #D0D3D9
 
 $family-sans-serif: 'Raleway','Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif
 $text: $grey-darker
 $primary: $yellow
 $mobile: 576px !default
+$super-hd: 2560px !default
 
 $navbar-background-color: transparent
+$navbar-breakpoint: 2560px
 $navbar-height: 6.25rem
-$navbar-item-color: $grey-darker
-$navbar-item-hover-color: #000000
+$navbar-item-color: $grey-light
+$navbar-item-hover-color: #ffffff
+$navbar-item-hover-background-color: transparent
 $navbar-padding-horizontal: 3rem
 $navbar-padding-vertical: 0.5rem
 
@@ -24,9 +31,15 @@ $navbar-padding-vertical: 0.5rem
 *:-moz-selection
   background: $grey-darker !important
   color: #ffffff !important
+  text-shadow: none
 *::selection
   background: $grey-darker !important
   color: #ffffff !important
+  text-shadow: none
+
+.subtitle strong, .title strong
+  letter-spacing: .125rem
+  text-transform: uppercase
 
 //Bulma Imports
 @import "bulma/sass/utilities/_all.sass"
@@ -41,5 +54,6 @@ $navbar-padding-vertical: 0.5rem
 @import "bulma/sass/layout/section.sass"
 
 @import "./mixins.sass"
+@import "./helpers.sass"
 @import "./headers.sass"
 @import "./landing.sass"

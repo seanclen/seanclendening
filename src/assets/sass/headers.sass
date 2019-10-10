@@ -1,26 +1,108 @@
-.logo-container
-  position: relative
-  background-color: #242426
-  width: 48px
-  height: 48px
-  z-index: 4
-  -webkit-transition: all 0.5s ease-in-out
-  -moz-transition: all 0.5s ease-in-out
-  -o-transition: all 0.5s ease-in-out
-  transition: all 0.5s ease-in-out
-  margin-top: 25px
+.navbar
+  .navbar-brand
+    .logo-container
+      position: relative
+      background-color: #242426
+      width: 48px
+      height: 48px
+      transition: all 0.5s ease-in-out
+      margin-left: 34px
+      margin-top: 26px
+      overflow: hidden
+      z-index: 4
+      svg
+        transition: all 0.5s ease-in-out
+      &.fullscreen
+        position: absolute
+        overflow: hidden
+        width: 100vw
+        height: 100vh
+        left: 0
+        top: 0
+        margin-top: 0px
+        margin-left: 0px
+      &.nav-is-active
+        position: absolute
+        overflow: hidden
+        width: 100vw
+        height: 100vh
+        left: 0
+        top: 0
+        margin-top: 0px
+        margin-left: 0px
+        svg
+          transform: scale(1.5) translate(-20vw, 20vh)
+    .navbar-burger
+      color: inherit
+      transition: transform 0.5s
+      transition-timing-function: cubic-bezier(0.755, 0.050, 0.840, 0.055)
+      z-index: 5
+      span
+        height: 4px
+        left: calc(50% - 16px)
+        transition-duration: 0.5s
+        width: 32px
+        &:nth-child(1)
+          top: calc(50% - 6px)
+          transition-delay: 0.2s
+        &:nth-child(2)
+          top: calc(50% + 6px)
+          transition-delay: 0.2s
+      // Modifiers
+      &:focus, &:hover
+        background-color: transparent
+        color: #FFFFFF
+      &.is-active
+        color: $white-ter
+        transform: rotate(180deg)
+        span
+          &:nth-child(1)
+            transform: translateY(6px) rotate(45deg)
+          &:nth-child(2)
+            transform: translateY(-6px) rotate(-45deg)
+            opacity: 1
+        &:focus, &:hover
+          color: #FFFFFF
+// Media Queries
+.navbar
+  +from($mobile)
+    .navbar-brand
+      margin-left: 2rem
+      margin-right: 0rem
 
-  &.animating
-    position: absolute
-    overflow: hidden
-    width: 100vw
-    height: 100vh
-    left: 0
-    top: 0
-    margin-top: 0px
-
-.navbar-brand
-  margin-right: 0.75rem
-  +mobile
-    margin-left: 1rem
-    margin-right: 0rem
+.nav
+  background: #ff000088
+  left: 0px
+  position: absolute
+  top: 0px
+  .navbar-menu
+    box-shadow: none
+    color: $grey-light
+    display: block
+    max-height: 0vh !important
+    transition: all 0.3s ease-in-out
+    z-index: 4
+    .navbar-item
+      font-size: 3rem
+      font-weight: 900
+      text-transform: uppercase
+    .navbar-end
+      font-size: 1rem
+      margin-top: 2rem
+      padding: 2rem 0.75rem
+      hr
+        background-color: $grey-dark
+        width: 32px
+      a
+        color: $grey-light
+        &:hover, &:focus
+          color: #FFFFFF
+          text-decoration: underline
+    &.is-active
+      max-height: calc(100vh - 6.25rem) !important
+      transition: all 1s ease-in-out
+  +from($mobile)
+    padding-top: 10rem
+    .navbar-menu
+      left: 50vw
+      position: absolute

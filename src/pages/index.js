@@ -76,16 +76,16 @@ class Index extends React.Component {
       opacity: [0, 1],
       translateY: ['10rem', '0rem']
     }).add({
+      targets: '.landing-intro .subtitle',
+      opacity: [0, 1],
+      translateY: ['-2rem', '0rem']
+    }, '-=250').add({
       targets: '.landing-intro .level-left',
       translateX: [-1000, 0]
     }).add({
       targets: '.landing-intro .level-right',
       translateX: [1000, 0]
-    }).add({
-      targets: '.landing-intro .subtitle',
-      opacity: [0, 1],
-      translateY: ['-2rem', '0rem']
-    })
+    }, '-=500')
 
     preloaderTimeline.finished.then(() => {
       landingTimeline.play()
@@ -98,23 +98,23 @@ class Index extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO />
-        <section class="hero landing-intro is-fullheight">
-          <div class="hero-body">
-            <div class="container has-text-centered">
+      <Layout location={this.props.location}>
+        <SEO title={siteTitle} />
+        <section className="hero landing-intro is-fullheight">
+          <div className="hero-body">
+            <div className="container has-text-centered">
               <div>
-                <h1 class="title has-text-weight-black">I'm <span class="has-text-white">Sean</span><span class="period">.</span></h1>
-                <p class="subtitle is-size-4">I love to create</p>
+                <h1 className="title has-text-weight-black">I'm <span className="has-text-white">Sean</span><span className="period">.</span></h1>
+                <p className="subtitle is-size-4">I love to create</p>
               </div>
-              <div class="level">
-                <div class="level-left">
-                  <div class="level-item">
+              <div className="level">
+                <div className="level-left">
+                  <div className="level-item">
                     <a href="" data-text="Developer">Developer</a>
                   </div>
                 </div>
-                <div class="level-right">
-                  <div class="level-item">
+                <div className="level-right">
+                  <div className="level-item">
                     <a href="" data-text="Music Lover">Music Lover</a>
                   </div>
                 </div>
