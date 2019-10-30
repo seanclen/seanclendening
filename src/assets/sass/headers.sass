@@ -1,3 +1,4 @@
+// Navbar is an upper-level container of Navigation
 .navbar
   .navbar-brand
     .logo-container
@@ -5,9 +6,9 @@
       background-color: #242426
       width: 48px
       height: 48px
-      transition: all 0.5s ease-in-out
       margin-left: 34px
       margin-top: 26px
+      transition: all 0.5s ease-in-out
       overflow: hidden
       z-index: 4
       svg
@@ -34,7 +35,7 @@
           transform: scale(1.5) translate(-20vw, 20vh)
     .navbar-burger
       color: inherit
-      transition: transform 0.5s
+      transition: color 0.2s, transform 0.5s
       transition-timing-function: cubic-bezier(0.755, 0.050, 0.840, 0.055)
       z-index: 5
       span
@@ -51,10 +52,11 @@
       // Modifiers
       &:focus, &:hover
         background-color: transparent
-        color: #FFFFFF
+        color: inherit
       &.is-active
         color: $white-ter
         transform: rotate(180deg)
+        transition: color 1s, transform 0.5s
         span
           &:nth-child(1)
             transform: translateY(6px) rotate(45deg)
@@ -62,34 +64,57 @@
             transform: translateY(-6px) rotate(-45deg)
             opacity: 1
         &:focus, &:hover
-          color: #FFFFFF
-// Media Queries
-.navbar
+          color: $white-ter
+  .nav
+    .navbar-menu
+      height: 0
+      &.is-active
+        height: auto
+        opacity: 1
+        overflow: visible
+        transition: all 1s ease-in-out
+        transition-delay: 0.5s
+
+  // Media Queries
   +from($mobile)
     .navbar-brand
       margin-left: 2rem
       margin-right: 0rem
 
+// Navigation
 .nav
-  background: #ff000088
   left: 0px
   position: absolute
   top: 0px
   .navbar-menu
     box-shadow: none
     color: $grey-light
-    display: block
-    max-height: 0vh !important
-    transition: all 0.3s ease-in-out
+    display: flex
+    flex-flow: column wrap
+    height: 0
+    max-height: 100vh !important
+    opacity: 0
+    overflow: hidden
+    padding: 0rem 0rem 0rem 0rem
+    position: relative
+    transition: all 0.2s ease-in-out
     z-index: 4
-    .navbar-item
-      font-size: 3rem
+    .navbar-start
+      font-size: 2rem
       font-weight: 900
+      left: 38vw
+      order: 2
+      position: relative
       text-transform: uppercase
+      .nav-items
+        display: flex
+        flex-flow: column wrap
     .navbar-end
-      font-size: 1rem
-      margin-top: 2rem
-      padding: 2rem 0.75rem
+      font-size: 0.75rem
+      top: 4rem
+      order: 1
+      padding: 1rem
+      position: relative
       hr
         background-color: $grey-dark
         width: 32px
@@ -98,11 +123,39 @@
         &:hover, &:focus
           color: #FFFFFF
           text-decoration: underline
-    &.is-active
-      max-height: calc(100vh - 6.25rem) !important
-      transition: all 1s ease-in-out
-  +from($mobile)
-    padding-top: 10rem
-    .navbar-menu
-      left: 50vw
-      position: absolute
+    //.navbar-menu Media Queries
+    +tablet
+      left: 38vw
+      top: 20vh
+      flex-flow: row wrap
+      .navbar-start
+        top: unset
+        left: unset
+        order: 1
+      .navbar-end
+        top: unset
+        left: unset
+        order: 2
+    +mobile
+      top: 10vh
+      .navbar-start
+        top: 12vh
+        left: 5vw
+        order: 1
+        .nav-items
+          flex-flow: row wrap
+      .navbar-end
+        order: 2
+        top: 15vh
+        left: 38vw
+    @media (max-width: 480px)
+      top: 0
+      .navbar-start
+        left: 38vw
+        order: 2
+        .nav-items
+          flex-flow: column wrap
+      .navbar-end
+        order: 1
+        top: 4rem
+        left: 0

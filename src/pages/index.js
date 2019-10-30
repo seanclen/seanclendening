@@ -103,7 +103,7 @@ class Index extends React.Component {
         <section className="hero landing-intro is-fullheight">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <div>
+              <div className="is-inline-block">
                 <h1 className="title has-text-weight-black">I'm <span className="has-text-white">Sean</span><span className="period">.</span></h1>
                 <p className="subtitle is-size-4">I love to create</p>
               </div>
@@ -115,7 +115,7 @@ class Index extends React.Component {
                 </div>
                 <div className="level-right">
                   <div className="level-item">
-                    <a href="" data-text="Music Lover">Music Lover</a>
+                    <a href="" data-text="Musician">Musician</a>
                   </div>
                 </div>
               </div>

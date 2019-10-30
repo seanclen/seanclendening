@@ -12,7 +12,7 @@ class Layout extends React.Component {
       <div>
         <Helmet>
           <html lang="en" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Helmet>
         <Header location={location} />
         <div>

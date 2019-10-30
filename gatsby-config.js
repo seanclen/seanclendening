@@ -3,7 +3,7 @@ module.exports = {
     title: `Sean Clendening`,
     author: `Sean Clendening`,
     description: `Sean's portfolio and personal website`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://seanclendening.com/`,
     social: {
       twitter: `SeanClendening`,
     },
@@ -64,7 +64,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/assets/img/icon.png`,
       },
     },
     `gatsby-plugin-offline`,
