@@ -11,6 +11,10 @@
       transition: all 0.5s ease-in-out
       overflow: hidden
       z-index: 4
+      .click-box
+        position: absolute
+        height: 48px
+        width: 48px
       svg
         transition: all 0.5s ease-in-out
       &.fullscreen
@@ -22,6 +26,8 @@
         top: 0
         margin-top: 0px
         margin-left: 0px
+        .click-box
+          z-index: -1
       &.nav-is-active
         position: absolute
         overflow: hidden
@@ -31,6 +37,8 @@
         top: 0
         margin-top: 0px
         margin-left: 0px
+        .click-box
+          z-index: -1
         svg
           transform: scale(1.5) translate(-20vw, 20vh)
     .navbar-burger
