@@ -19,9 +19,16 @@ class Layout extends React.Component {
           <main className="section-container">{children}</main>
         </div>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="bottom level">
+            <div className="level-left">
+              © {new Date().getFullYear()} Sean Clendening &mdash; Wilmington, Delaware
+            </div>
+            <div className="level-right">
+              <a href="https://bulma.io">
+                <img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma" width="128" height="24" />
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     )

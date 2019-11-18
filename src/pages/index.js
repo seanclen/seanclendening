@@ -34,10 +34,8 @@ class Index extends React.Component {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
-        
       </Layout>
     )
   }
