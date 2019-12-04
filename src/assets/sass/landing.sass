@@ -1,90 +1,52 @@
 .landing-intro
   background-color: #EAEBEE
-  // background-image: linear-gradient(-180deg, #EAEBEE 0%, #EAEBEE 23%, #E1E3E6 57%, #EAEBEE 62%, #D0D3D9 100%)
   background-image: linear-gradient(-180deg, #F2C53D 0%, #F2C53D 23%, #F9D757 57%, #F7CD4E 62%, #F2C53D 99%)
   position: relative
   .hero-body
-    // background-color: transparentize($primary, 0.95)
     overflow: hidden
-    .level
-      margin-top: 15rem
-      padding: 0rem 10rem
-      .level-left .level-item, .level-right .level-item
-        color: $white
-        font-size: 3.5rem
-        font-weight: 900
-        margin-top: 1rem
-        margin-bottom: 1rem
-        position: relative
-        transition: all 0.5s ease-in-out
-        z-index: 0
-        a[data-text]
-          color: inherit
-          &:before
-            color: inherit
-            font-size: inherit
-            font-weight: inherit
-            position: absolute
-            z-index: -2
-          &:after
-            background-color: $primary
-            bottom: 0.25rem
-            content: ''
-            height: 1rem
-            left: -0.5rem
-            position: absolute
-            width: 105%
-            z-index: -1
-        &:before
-          display: block
-          content: ' '
-          height: 0px
-          position: absolute
-          bottom: -5rem
-          transition: all 0.5s ease-in-out
-          width: 90%
-          box-shadow: 0 0 25px 15px rgba(0,0,0,0.05)
-        &:after
-          background-color: $primary
-          bottom: 0.25rem
-          content: ''
-          height: 1rem
-          left: -0.5rem
-          position: absolute
-          width: 105%
-          z-index: -3
-        &:hover
-          margin-top: 2rem
-          margin-bottom: 0rem
-          &:before
-            box-shadow: 0 -1rem 25px 20px rgba(0,0,0,0.10)
-            margin-bottom: 0.5rem
-            width: 95%
-
-      .level-left .level-item
-        text-shadow: 1px -1px 0 hsl(0, 0%, 93%), 2px -2px 0 hsl(0, 0%, 91%)
-        a[data-text]
-          &:before
-            content: attr(data-text)
-            text-shadow: 3px -3px 0 hsl(0, 0%, 89%), 4px -4px 0 hsl(0, 0%, 87%), 5px -5px 0 hsl(0, 0%, 85%)
-          &:after
-            box-shadow: 1px -1px 0 darken($primary, 2%), 2px -2px 0 darken($primary, 3%)
-        &:after
-          box-shadow: 3px -3px 0 darken($primary, 4%), 4px -4px 0 darken($primary, 5%), 5px -5px 0 darken($primary, 6%), 6px -6px 0 darken($primary, 7%), 7px -7px 0 darken($primary, 8%), 8px -8px 0 darken($primary, 9%), 9px -9px 0 darken($primary, 10%), 10px -10px 0 darken($primary, 11%)
-
-      .level-right .level-item
-        text-shadow: -1px -1px 0 hsl(0, 0%, 93%), -2px -2px 0 hsl(0, 0%, 91%)
-        a[data-text]
-            &:before
-              content: attr(data-text)
-              text-shadow: -3px -3px 0 hsl(0, 0%, 89%), -4px -4px 0 hsl(0, 0%, 87%), -5px -5px 0 hsl(0, 0%, 85%)
-            &:after
-              box-shadow: -1px -1px 0 darken($primary, 2%), -2px -2px 0 darken($primary, 3%)
-        &:after
-          box-shadow: -3px -3px 0 darken($primary, 4%), -4px -4px 0 darken($primary, 5%), -5px -5px 0 darken($primary, 6%), -6px -6px 0 darken($primary, 7%), -7px -7px 0 darken($primary, 8%), -8px -8px 0 darken($primary, 9%), -9px -9px 0 darken($primary, 10%), -10px -10px 0 darken($primary, 11%)
-
     .title
       font-size: 5.25rem
       .period
         color: $primary
         text-shadow: 0.15rem 0rem $primary
+    .level
+      margin-top: 15rem
+      padding: 0rem 10rem
+      +mobile
+        margin-top: 5rem
+        padding: 0rem 1rem
+      .level-left, .level-right
+        display: flex
+        justify-content: center
+        .level-item
+          color: $white
+          font-size: 3.5rem
+          font-weight: 900
+          margin-top: 1rem
+          margin-bottom: 1rem
+          position: relative
+          transition: all 0.5s ease-in-out
+          &:before
+            display: block
+            content: ' '
+            height: 0px
+            position: absolute
+            bottom: -5rem
+            transition: all 0.5s ease-in-out
+            width: 90%
+            box-shadow: 0 0 25px 15px rgba(0,0,0,0.05)
+
+          &:hover
+            margin-top: 2rem
+            margin-bottom: 0rem
+            &:before
+              box-shadow: 0 -1rem 25px 20px rgba(0,0,0,0.10)
+              margin-bottom: 0.5rem
+              width: 95%
+
+      .level-left .text-extrude
+        +text-extrude($white, 5, false, $underline-color: $primary)
+        +mobile
+          +text-extrude($white, 5, true, $underline-color: $primary)
+      .level-right .text-extrude
+        +text-extrude($white, 5, true, $underline-color: $primary)

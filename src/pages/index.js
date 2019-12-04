@@ -23,13 +23,13 @@ class Index extends React.Component {
               </div>
               <div className="level">
                 <div className="level-left">
-                  <div className="level-item">
-                    <a href="" data-text="Developer">Developer</a>
+                  <div className="level-item text-extrude">
+                    <a href="" className="text-extrude-item" data-text="Developer">Developer</a>
                   </div>
                 </div>
                 <div className="level-right">
-                  <div className="level-item">
-                    <a href="" data-text="Musician">Musician</a>
+                  <div className="level-item text-extrude">
+                    <a href="" className="text-extrude-item" data-text="Musician">Musician</a>
                   </div>
                 </div>
               </div>
