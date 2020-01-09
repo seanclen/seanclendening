@@ -34,13 +34,14 @@
             bottom: -5rem
             transition: all 0.5s ease-in-out
             width: 90%
-            box-shadow: 0 0 25px 15px rgba(0,0,0,0.05)
+            box-shadow: 0 0 25px 10px rgba(70,140,127,0.10)
 
           &:hover
             margin-top: 2rem
             margin-bottom: 0rem
             &:before
-              box-shadow: 0 -1rem 25px 20px rgba(0,0,0,0.10)
+              $darker-shadow: darken(rgba(70,140,127,0.13), 10%)
+              box-shadow: 0 -1rem 25px 20px $darker-shadow
               margin-bottom: 0.5rem
               width: 95%
 
