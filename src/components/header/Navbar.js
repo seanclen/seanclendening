@@ -91,7 +91,7 @@ export default class Navbar extends React.Component {
   }
 
   playHelloAnimation() {
-    if (this.state.isNavigationToggled) {
+    if (!this.state.isNavigationToggled) {
       this.preloaderTimeline.play()
     }
   }

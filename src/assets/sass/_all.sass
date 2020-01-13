@@ -1,23 +1,23 @@
 //Bulma Overrides
-$blue: #468C7F
-$cyan: #A9D9D9
-$yellow: #F2C53D //#D9C077
-$tan: #F2D272
-$orange: #F2884B
+@import "./variables.scss"
 
 $grey-darker: #242426
 $grey-dark: hsl(0, 0%, 29%)
 $grey: hsl(0, 0%, 42%)
 $grey-light: hsl(0, 0%, 71%)
 $grey-lighter: hsl(0, 0%, 86%)
-$white-ter: #D0D3D9
+$white-ter: #ffffff //#D0D3D9
 
 $body-background-color: $grey-darker
 $family-sans-serif: 'Raleway','Avenir Next','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif
 $text: $grey-darker
 $primary: $blue
+$dark-invert: #ffffff
 $mobile: 576px !default
 $super-hd: 2560px !default
+$radius-small: 0px !default
+$radius: 0px !default
+$radius-large: 0px !default
 
 $navbar-background-color: transparent
 $navbar-breakpoint: 2560px
@@ -28,7 +28,13 @@ $navbar-item-hover-background-color: transparent
 $navbar-padding-horizontal: 3rem
 $navbar-padding-vertical: 0.5rem
 
+$button-border-width: 4px !default
+$control-border-width: $button-border-width !default
+$button-padding-horizontal: 2rem
+
 // Global
+.button
+  font-weight: 700
 .has-text-weight-extra-bold
   font-weight: 800 !important
 .has-text-weight-black
@@ -45,6 +51,18 @@ $navbar-padding-vertical: 0.5rem
 .subtitle strong, .title strong
   letter-spacing: .125rem
   text-transform: uppercase
+
+.section:not(.override-default)
+  background-color: #ffffff
+
+svg
+  display: block
+
+hr.brand-period
+  width: 1rem
+  height: 1rem
+  margin: auto
+  background-color: $primary
 
 //Bulma Imports
 @import "bulma/sass/utilities/_all.sass"
@@ -63,3 +81,4 @@ $navbar-padding-vertical: 0.5rem
 @import "./footer.sass"
 @import "./headers.sass"
 @import "./landing.sass"
+@import "./typography.sass"
