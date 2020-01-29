@@ -97,7 +97,6 @@ SplitBubbleContent.defaultProps = {
   options: {
     topColor: "#F2C53D",
     bottomColor: "#FFFFFF",
-    circleColors: ["468C7F", "A9D9D9", "#FFFFFF"]
   },
 
 }

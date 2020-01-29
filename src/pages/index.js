@@ -4,8 +4,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import SplitBubbleContent from "../components/SplitBubbleContent"
 
-import colorVariables from "../assets/sass/variables.scss"
-
 export default class Index extends React.Component {
   render() {
     return (
@@ -48,6 +46,38 @@ export default class Index extends React.Component {
     )
   }
 }
+
+
+const SectionTop = () => (
+  <section className="section override-default is-large p-t-100">
+    <div className="container has-text-centered">
+      <div className="content">
+        <h3 className="subtitle">Creative \\ Focused</h3>
+        <hr className="brand-period" />
+        <h3 className="title">This is what I do</h3>
+        <p className="is-size-4">We partner with global brands and emerging businesses to create exciting and meaningful experiences, whether digital or non-digital.</p>
+      </div>
+    </div>
+  </section>
+)
+
+const SectionBottom = () => (
+  <section className="section override-default is-large">
+    <div className="container has-text-centered">
+      <div className="content">
+        <h2 className="title">Recent Work<span className="period">.</span></h2>
+        <button className="button is-large is-dark is-outlined">check out my work</button>
+      </div>
+    </div>
+  </section>
+)
+
+const colorVariables = {
+  yellow: '#F2C53D',
+  blue: "#468C7F",
+  cyan: "#A9D9D9",
+}
+
 const splitBubbleContentOptions = {
   topColor: colorVariables.yellow,
   bottomColor: "#FFFFFF",
@@ -80,27 +110,3 @@ const bubbles = [
     top: "55%"
   }
 ]
-
-const SectionTop = () => (
-  <section className="section override-default is-large p-t-100">
-    <div className="container has-text-centered">
-      <div className="content">
-        <h3 className="subtitle">Creative \\ Focused</h3>
-        <hr className="brand-period" />
-        <h3 className="title">This is what I do</h3>
-        <p className="is-size-4">We partner with global brands and emerging businesses to create exciting and meaningful experiences, whether digital or non-digital.</p>
-      </div>
-    </div>
-  </section>
-)
-
-const SectionBottom = () => (
-  <section className="section override-default is-large">
-    <div className="container has-text-centered">
-      <div className="content">
-        <h2 className="title">Recent Work<span className="period">.</span></h2>
-        <button className="button is-large is-dark is-outlined">check out my work</button>
-      </div>
-    </div>
-  </section>
-)
